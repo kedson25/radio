@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Radio SSP21</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="player">
+        <div class="status-row">
+          <span id="liveDot" class="dot"></span>
+          <span id="stateLabel">Conectando</span>
+        </div>
+
+        <h1>Radio ao vivo</h1>
+        <p id="trackTitle" class="track">Aguardando musica</p>
+        <p id="requestedBy" class="byline"></p>
+
+        <audio id="audio" controls preload="auto" autoplay></audio>
+
+        <div class="controls">
+          <button id="startButton" type="button">Ligar radio</button>
+          <button id="skipButton" type="button">Pular musica</button>
+          <button id="muteButton" type="button">Som ligado</button>
+        </div>
+
+        <p id="hint" class="hint">
+          Clique uma vez em ligar radio. Depois disso as proximas musicas entram automaticamente.
+        </p>
+      </section>
+
+      <section class="queue-panel" aria-label="Musicas recebidas da API">
+        <div class="panel-head">
+          <h2>Fila da API</h2>
+          <span id="queueCount">0 musicas</span>
+        </div>
+        <div id="queueList" class="queue-list"></div>
+      </section>
+    </main>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>

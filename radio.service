@@ -1,0 +1,18 @@
+[Unit]
+Description=Radio SSP21
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+User=radio
+Group=radio
+WorkingDirectory=/opt/radio
+Environment=PYTHONUNBUFFERED=1
+Environment=RADIO_BASE_DIR=/opt/radio
+ExecStart=/opt/radio/venv/bin/python /opt/radio/radio.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

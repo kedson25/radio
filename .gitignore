@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+
+cookies.txt
+radio_estado.json
+*.tmp
+
+musicas/
+erros/
+*.mp3
+
+.venv/
+venv/
+play.bat
